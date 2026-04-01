@@ -1,182 +1,277 @@
 <!DOCTYPE html>
 
-<html class="light" lang="fr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "error-container": "#ffdad6",
-              "error": "#ba1a1a",
-              "on-primary-fixed-variant": "#133ca8",
-              "on-surface-variant": "#444653",
-              "primary-container": "#0033a0",
-              "tertiary-fixed-dim": "#ffb5a0",
-              "surface": "#f9f9f9",
-              "secondary-container": "#c4dcff",
-              "outline-variant": "#c4c5d5",
-              "surface-container-highest": "#e2e2e2",
-              "tertiary-fixed": "#ffdbd1",
-              "primary-fixed": "#dce1ff",
-              "on-surface": "#1a1c1c",
-              "secondary": "#49607e",
-              "on-secondary-fixed-variant": "#314865",
-              "secondary-fixed-dim": "#b0c8eb",
-              "on-primary": "#ffffff",
-              "surface-container-high": "#e8e8e8",
-              "inverse-primary": "#b6c4ff",
-              "surface-variant": "#e2e2e2",
-              "on-tertiary": "#ffffff",
-              "background": "#f9f9f9",
-              "on-secondary-fixed": "#001c37",
-              "inverse-surface": "#2f3131",
-              "on-primary-container": "#8ea6ff",
-              "primary-fixed-dim": "#b6c4ff",
-              "on-primary-fixed": "#001550",
-              "on-error-container": "#93000a",
-              "secondary-fixed": "#d2e4ff",
-              "surface-container-low": "#f3f3f4",
-              "tertiary": "#531100",
-              "on-background": "#1a1c1c",
-              "surface-tint": "#3456c1",
-              "surface-dim": "#dadada",
-              "tertiary-container": "#791d00",
-              "on-secondary": "#ffffff",
-              "on-tertiary-fixed-variant": "#842506",
-              "on-secondary-container": "#49617f",
-              "outline": "#747684",
-              "on-tertiary-container": "#ff8a68",
-              "surface-container": "#eeeeee",
-              "primary": "#00216e",
-              "inverse-on-surface": "#f0f1f1",
-              "surface-bright": "#f9f9f9",
-              "surface-container-lowest": "#ffffff",
-              "on-error": "#ffffff",
-              "on-tertiary-fixed": "#3b0900"
-            },
-            fontFamily: {
-              "headline": ["Inter"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#133ca8",
+            "on-surface-variant": "#444653",
+            "primary-container": "#0033a0",
+            "tertiary-fixed-dim": "#ffb5a0",
+            "surface": "#f9f9f9",
+            "secondary-container": "#c4dcff",
+            "outline-variant": "#c4c5d5",
+            "surface-container-highest": "#e2e2e2",
+            "tertiary-fixed": "#ffdbd1",
+            "primary-fixed": "#dce1ff",
+            "on-surface": "#1a1c1c",
+            "secondary": "#49607e",
+            "on-secondary-fixed-variant": "#314865",
+            "secondary-fixed-dim": "#b0c8eb",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#e8e8e8",
+            "inverse-primary": "#b6c4ff",
+            "surface-variant": "#e2e2e2",
+            "on-tertiary": "#ffffff",
+            "background": "#f9f9f9",
+            "on-secondary-fixed": "#001c37",
+            "inverse-surface": "#2f3131",
+            "on-primary-container": "#8ea6ff",
+            "primary-fixed-dim": "#b6c4ff",
+            "on-primary-fixed": "#001550",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#d2e4ff",
+            "surface-container-low": "#f3f3f4",
+            "tertiary": "#531100",
+            "on-background": "#1a1c1c",
+            "surface-tint": "#3456c1",
+            "surface-dim": "#dadada",
+            "tertiary-container": "#791d00",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#842506",
+            "on-secondary-container": "#49617f",
+            "outline": "#747684",
+            "on-tertiary-container": "#ff8a68",
+            "surface-container": "#eeeeee",
+            "primary": "#00216e",
+            "inverse-on-surface": "#f0f1f1",
+            "surface-bright": "#f9f9f9",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#3b0900"
           },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
         },
-      }
-    </script>
-<style>
-        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .glass-header { background: rgba(249, 249, 249, 0.8); backdrop-filter: blur(20px); }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-    </style>
-<style>
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-header {
+      background: rgba(249, 249, 249, 0.8);
+      backdrop-filter: blur(20px);
+    }
+
+    /* Nav items */
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    /* Tooltip label au survol (desktop) */
+    .nav-label {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      background: #00216e;
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 4px 10px;
+      border-radius: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .nav-label::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-top-color: #00216e;
+    }
+
+    .nav-item:hover .nav-label,
+    .nav-item.active .nav-label {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Pill active */
+    .nav-item.active {
+      background: #dce1ff;
+    }
+
+    .nav-item.active .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      color: #00216e;
+    }
+
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
+</head>
+
 <body class="bg-surface text-on-surface min-h-screen pb-24">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full h-14 z-50 bg-surface/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-4 w-full h-14">
-<div class="flex items-center gap-3">
-<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-container/10 text-blue-900">
-<span class="material-symbols-outlined text-[20px]">psychology</span>
-</div>
-<h1 class="text-base font-semibold Inter text-blue-900 dark:text-blue-400">Tableau de Bord</h1>
-</div>
-<div class="flex items-center">
-<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/30">
-<img alt="User Profile" data-alt="Yanne Cedric Wilson Kouassi in pink shirt, professional corporate headshot, soft lighting, minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGMf4zrMuTfIAbeOPO9EZ34FPdYn2jT_oa2AcIfGfVTF3unc2ZhV5tyLNGQ76ZAQGIQc0YiBKFGF5NMav0up2pHdrcihyPLiVdpz0O7Y--S8l1hVQKWxLVYgZKgLPyGR9xZ72Yy3Oz5OOilc_bC9d8q0qr_Jtx7BoqoFeH06wd7eryPJOoWefw6SMDpEoYr5dIwkeMIiASax9pBn4rEz51EI9Y27lodQ9Dw4I8Pr5vfxZFLhYfm7SUNwducBYkwif7pYmdvar3XuAi"/>
-</div>
-</div>
-</header>
-<main class="pt-20 px-4 max-w-2xl mx-auto">
-<!-- Editorial Header -->
-<section class="mb-8">
-<h2 class="text-[2.25rem] font-extrabold tracking-tight text-primary leading-tight mb-2">Congés &amp; Permissions</h2>
-<p class="text-secondary body-md opacity-80">Gérez vos absences et consultez vos soldes en temps réel.</p>
-</section>
-<!-- Status Badges / Pulse Chips (Editorial Grid) -->
-<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-<!-- Pending -->
-<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center transition-all duration-200 hover:bg-surface-container-highest">
-<div class="flex items-center gap-2 mb-1">
-<div class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
-<span class="text-[14px] font-medium text-on-surface-variant">Pending</span>
-</div>
-<span class="text-2xl font-bold text-primary">0</span>
-</div>
-<!-- Validated -->
-<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center transition-all duration-200 hover:bg-surface-container-highest">
-<span class="text-[14px] font-medium text-on-surface-variant mb-1">Validated</span>
-<span class="text-2xl font-bold text-primary">0</span>
-</div>
-<!-- Approved -->
-<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center transition-all duration-200 hover:bg-surface-container-highest">
-<span class="text-[14px] font-medium text-on-surface-variant mb-1">Approved</span>
-<span class="text-2xl font-bold text-primary">0</span>
-</div>
-<!-- Rejected -->
-<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center transition-all duration-200 hover:bg-surface-container-highest">
-<span class="text-[14px] font-medium text-on-surface-variant mb-1">Rejected</span>
-<span class="text-2xl font-bold text-primary">0</span>
-</div>
-</div>
-<!-- Action Button -->
-<div class="flex justify-center mb-12">
-<button class="bg-primary-container text-on-primary px-8 py-3.5 rounded-[15px] font-semibold flex items-center gap-2 transition-all duration-200 active:scale-95 shadow-lg shadow-primary-container/20">
-<span class="material-symbols-outlined text-[20px]">add</span>
-<span>+ Nouvelle demande</span>
-</button>
-</div>
-<!-- Empty State Canvas (Atmospheric Depth) -->
-<section class="flex flex-col items-center justify-center py-20 bg-surface-container-lowest rounded-[32px] border border-outline-variant/10">
-<div class="relative mb-6">
-<div class="absolute inset-0 bg-primary-container/5 rounded-full blur-2xl"></div>
-<div class="relative w-24 h-24 flex items-center justify-center text-primary/20">
-<span class="material-symbols-outlined text-[64px]" style="font-variation-settings: 'FILL' 0;">event_busy</span>
-</div>
-</div>
-<h3 class="text-title-md font-semibold text-primary mb-2">Aucune demande trouvée</h3>
-<p class="text-on-surface-variant body-md text-center px-8 max-w-xs leading-relaxed">
-                Vous n'avez pas encore soumis de demande de congé ou de permission pour cette période.
-            </p>
-</section>
-</main>
-<!-- BottomNavBar -->
-<nav class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-2 pb-safe bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 rounded-t-2xl shadow-[0_-4px_20px_rgba(0,33,110,0.04)]">
-<!-- Ma fiche -->
-<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 px-3 py-2 rounded-xl transition-all" href="#">
-<span class="material-symbols-outlined text-[24px]">person</span>
-<span class="text-[12px] font-medium Inter">Ma fiche</span>
-</a>
-<!-- Bulletins -->
-<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 px-3 py-2 rounded-xl transition-all" href="#">
-<span class="material-symbols-outlined text-[24px]">description</span>
-<span class="text-[12px] font-medium Inter">Bulletins</span>
-</a>
-<!-- Présences -->
-<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 px-3 py-2 rounded-xl transition-all" href="#">
-<span class="material-symbols-outlined text-[24px]">schedule</span>
-<span class="text-[12px] font-medium Inter">Présences</span>
-</a>
-<!-- Congés (Active) -->
-<a class="flex flex-col items-center justify-center text-blue-800 dark:text-blue-400 font-bold scale-110 transition-transform px-3 py-2 rounded-xl" href="#">
-<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
-<span class="text-[12px] font-bold Inter">Congés</span>
-</a>
-<!-- Évaluations -->
-<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 px-3 py-2 rounded-xl transition-all" href="#">
-<span class="material-symbols-outlined text-[24px]">grade</span>
-<span class="text-[12px] font-medium Inter">Évaluations</span>
-</a>
-</nav>
-</body></html>
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full h-14 z-50 bg-surface/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-4 w-full h-14">
+    <div class="flex items-center gap-3">
+      <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-container/10 text-blue-900">
+        <span class="material-symbols-outlined text-[20px]">psychology</span>
+      </div>
+      <h1 class="text-base font-semibold Inter text-blue-900 dark:text-blue-400">Tableau de Bord</h1>
+    </div>
+    <div class="flex items-center">
+      <div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/30">
+        <img alt="User Profile"
+          data-alt="Yanne Cedric Wilson Kouassi in pink shirt, professional corporate headshot, soft lighting, minimalist background"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGMf4zrMuTfIAbeOPO9EZ34FPdYn2jT_oa2AcIfGfVTF3unc2ZhV5tyLNGQ76ZAQGIQc0YiBKFGF5NMav0up2pHdrcihyPLiVdpz0O7Y--S8l1hVQKWxLVYgZKgLPyGR9xZ72Yy3Oz5OOilc_bC9d8q0qr_Jtx7BoqoFeH06wd7eryPJOoWefw6SMDpEoYr5dIwkeMIiASax9pBn4rEz51EI9Y27lodQ9Dw4I8Pr5vfxZFLhYfm7SUNwducBYkwif7pYmdvar3XuAi" />
+      </div>
+    </div>
+  </header>
+  <main class="pt-20 px-4 max-w-2xl mx-auto">
+    <!-- Editorial Header -->
+    <section class="mb-8">
+      <h2 class="text-[2.25rem] font-extrabold tracking-tight text-primary leading-tight mb-2">Congés &amp; Permissions
+      </h2>
+      <p class="text-secondary body-md opacity-80">Gérez vos absences et consultez vos soldes en temps réel.</p>
+    </section>
+    <!-- Status Badges / Pulse Chips (Editorial Grid) -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+      <!-- Pending -->
+      <div
+        class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center transition-all duration-200 hover:bg-surface-container-highest">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
+          <span class="text-[14px] font-medium text-on-surface-variant">Pending</span>
+        </div>
+        <span class="text-2xl font-bold text-primary">0</span>
+      </div>
+      <!-- Validated -->
+      <div
+        class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center transition-all duration-200 hover:bg-surface-container-highest">
+        <span class="text-[14px] font-medium text-on-surface-variant mb-1">Validated</span>
+        <span class="text-2xl font-bold text-primary">0</span>
+      </div>
+      <!-- Approved -->
+      <div
+        class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center transition-all duration-200 hover:bg-surface-container-highest">
+        <span class="text-[14px] font-medium text-on-surface-variant mb-1">Approved</span>
+        <span class="text-2xl font-bold text-primary">0</span>
+      </div>
+      <!-- Rejected -->
+      <div
+        class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center transition-all duration-200 hover:bg-surface-container-highest">
+        <span class="text-[14px] font-medium text-on-surface-variant mb-1">Rejected</span>
+        <span class="text-2xl font-bold text-primary">0</span>
+      </div>
+    </div>
+    <!-- Action Button -->
+    <div class="flex justify-center mb-12">
+      <button
+        class="bg-primary-container text-on-primary px-8 py-3.5 rounded-[15px] font-semibold flex items-center gap-2 transition-all duration-200 active:scale-95 shadow-lg shadow-primary-container/20">
+        <span class="material-symbols-outlined text-[20px]">add</span>
+        <span><a href="nouvelledemandeconge_screen.html">Nouvelle demande</a></span>
+      </button>
+    </div>
+    <!-- Empty State Canvas (Atmospheric Depth) -->
+    <section
+      class="flex flex-col items-center justify-center py-20 bg-surface-container-lowest rounded-[32px] border border-outline-variant/10">
+      <div class="relative mb-6">
+        <div class="absolute inset-0 bg-primary-container/5 rounded-full blur-2xl"></div>
+        <div class="relative w-24 h-24 flex items-center justify-center text-primary/20">
+          <span class="material-symbols-outlined text-[64px]"
+            style="font-variation-settings: 'FILL' 0;">event_busy</span>
+        </div>
+      </div>
+      <h3 class="text-title-md font-semibold text-primary mb-2">Aucune demande trouvée</h3>
+      <p class="text-on-surface-variant body-md text-center px-8 max-w-xs leading-relaxed">
+        Vous n'avez pas encore soumis de demande de congé ou de permission pour cette période.
+      </p>
+    </section>
+  </main>
+  <!-- BottomNavBar — icônes seules, label au survol/clic -->
+  <nav
+    class="fixed bottom-0 left-0 w-full h-16 bg-white/90 backdrop-blur-md flex justify-around items-center px-4 z-50 rounded-t-2xl shadow-[0_-4px_20px_rgba(0,33,110,0.06)] border-t border-slate-100">
+
+    <a href="maficheemploye_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Ma fiche</span>
+      <span class="material-symbols-outlined text-blue-900">person</span>
+    </a>
+
+    <a href="mesbulletinsdepaie_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Bulletins</span>
+      <span class="material-symbols-outlined">description</span>
+    </a>
+
+    <a href="mespresences_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Présences</span>
+      <span class="material-symbols-outlined">schedule</span>
+    </a>
+
+    <a href="lcongepermission_screen.html" class="nav-item active" onclick="setActive(this)">
+      <span class="nav-label">Congés</span>
+      <span class="material-symbols-outlined">calendar_today</span>
+    </a>
+
+    <a href="mesevaluations_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Évaluations</span>
+      <span class="material-symbols-outlined">grade</span>
+    </a>
+
+  </nav>
+
+  <script>
+    function setActive(el) {
+      document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+      el.classList.add('active');
+      // La navigation se fait normalement via le href
+    }
+  </script>
+</body>
+
+</html>

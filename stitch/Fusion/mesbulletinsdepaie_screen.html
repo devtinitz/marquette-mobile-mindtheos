@@ -1,280 +1,371 @@
 <!DOCTYPE html>
 
-<html class="light" lang="fr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mes Bulletins de Paie | Mindtheos</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "error-container": "#ffdad6",
-              "error": "#ba1a1a",
-              "on-primary-fixed-variant": "#133ca8",
-              "on-surface-variant": "#444653",
-              "primary-container": "#0033a0",
-              "tertiary-fixed-dim": "#ffb5a0",
-              "surface": "#f9f9f9",
-              "secondary-container": "#c4dcff",
-              "outline-variant": "#c4c5d5",
-              "surface-container-highest": "#e2e2e2",
-              "tertiary-fixed": "#ffdbd1",
-              "primary-fixed": "#dce1ff",
-              "on-surface": "#1a1c1c",
-              "secondary": "#49607e",
-              "on-secondary-fixed-variant": "#314865",
-              "secondary-fixed-dim": "#b0c8eb",
-              "on-primary": "#ffffff",
-              "surface-container-high": "#e8e8e8",
-              "inverse-primary": "#b6c4ff",
-              "surface-variant": "#e2e2e2",
-              "on-tertiary": "#ffffff",
-              "background": "#f9f9f9",
-              "on-secondary-fixed": "#001c37",
-              "inverse-surface": "#2f3131",
-              "on-primary-container": "#8ea6ff",
-              "primary-fixed-dim": "#b6c4ff",
-              "on-primary-fixed": "#001550",
-              "on-error-container": "#93000a",
-              "secondary-fixed": "#d2e4ff",
-              "surface-container-low": "#f3f3f4",
-              "tertiary": "#531100",
-              "on-background": "#1a1c1c",
-              "surface-tint": "#3456c1",
-              "surface-dim": "#dadada",
-              "tertiary-container": "#791d00",
-              "on-secondary": "#ffffff",
-              "on-tertiary-fixed-variant": "#842506",
-              "on-secondary-container": "#49617f",
-              "outline": "#747684",
-              "on-tertiary-container": "#ff8a68",
-              "surface-container": "#eeeeee",
-              "primary": "#00216e",
-              "inverse-on-surface": "#f0f1f1",
-              "surface-bright": "#f9f9f9",
-              "surface-container-lowest": "#ffffff",
-              "on-error": "#ffffff",
-              "on-tertiary-fixed": "#3b0900"
-            },
-            fontFamily: {
-              "headline": ["Inter"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Mes Bulletins de Paie | Mindtheos</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#133ca8",
+            "on-surface-variant": "#444653",
+            "primary-container": "#0033a0",
+            "tertiary-fixed-dim": "#ffb5a0",
+            "surface": "#f9f9f9",
+            "secondary-container": "#c4dcff",
+            "outline-variant": "#c4c5d5",
+            "surface-container-highest": "#e2e2e2",
+            "tertiary-fixed": "#ffdbd1",
+            "primary-fixed": "#dce1ff",
+            "on-surface": "#1a1c1c",
+            "secondary": "#49607e",
+            "on-secondary-fixed-variant": "#314865",
+            "secondary-fixed-dim": "#b0c8eb",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#e8e8e8",
+            "inverse-primary": "#b6c4ff",
+            "surface-variant": "#e2e2e2",
+            "on-tertiary": "#ffffff",
+            "background": "#f9f9f9",
+            "on-secondary-fixed": "#001c37",
+            "inverse-surface": "#2f3131",
+            "on-primary-container": "#8ea6ff",
+            "primary-fixed-dim": "#b6c4ff",
+            "on-primary-fixed": "#001550",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#d2e4ff",
+            "surface-container-low": "#f3f3f4",
+            "tertiary": "#531100",
+            "on-background": "#1a1c1c",
+            "surface-tint": "#3456c1",
+            "surface-dim": "#dadada",
+            "tertiary-container": "#791d00",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#842506",
+            "on-secondary-container": "#49617f",
+            "outline": "#747684",
+            "on-tertiary-container": "#ff8a68",
+            "surface-container": "#eeeeee",
+            "primary": "#00216e",
+            "inverse-on-surface": "#f0f1f1",
+            "surface-bright": "#f9f9f9",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#3b0900"
           },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
         },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body { font-family: 'Inter', sans-serif; }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
+      },
     }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+     .glass-header {
+      background: rgba(249, 249, 249, 0.8);
+      backdrop-filter: blur(20px);
+    }
+    /* Nav items */
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    /* Tooltip label au survol (desktop) */
+    .nav-label {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      background: #00216e;
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 4px 10px;
+      border-radius: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+    .nav-label::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-top-color: #00216e;
+    }
+
+    .nav-item:hover .nav-label,
+    .nav-item.active .nav-label {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Pill active */
+    .nav-item.active {
+      background: #dce1ff;
+    }
+    .nav-item.active .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      color: #00216e;
+    }
+
+    body { min-height: max(884px, 100dvh); }
   </style>
-  </head>
+</head>
+
 <body class="bg-surface text-on-surface min-h-screen pb-32">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full h-14 z-50 bg-surface/80 backdrop-blur-xl flex justify-between items-center px-4 w-full h-14">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-blue-900" data-icon="psychology">psychology</span>
-<h1 class="text-base font-semibold text-blue-900">Tableau de Bord</h1>
-</div>
-<div class="flex items-center gap-2">
-<img alt="Profile" class="w-8 h-8 rounded-full object-cover" data-alt="Close up portrait of a young professional man with a pink shirt against a clean minimal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXP1anV9q82OytQR5NklF1TmQJiiUTTRC571mMHvZpBSNvpsqoXpJMLLhQmiueHkw4cOai3JI31dOZiZt4ET4Gxvj1qWM6VPkcYTcqQcfPHHB1sTjGHyD8kosVWdzy3Dtao__BYB_dYits4QVZaVpavBM0mZcaPcttYee9a2KDLTCugIcN7WBqicbN2fkWG2lamDNS62-pOoIuC9xw7nHpy4elrp7ZwQAETGUoHhQ9FWyWJLu8DmUwL40MSZ4K7KVjYFhbxfEQ4bni"/>
-</div>
-</header>
-<main class="pt-20 px-6 max-w-4xl mx-auto">
-<!-- Editorial Header -->
-<header class="mb-10">
-<h2 class="text-[2.25rem] font-extrabold tracking-tight text-primary leading-tight">
-                Mes bulletins <br/> de paie
-            </h2>
-<p class="text-secondary mt-2 font-medium">Consultez et téléchargez vos documents de rémunération.</p>
-</header>
-<!-- Featured/Latest Payslip Card (Asymmetric Layout) -->
-<section class="mb-12">
-<div class="bg-primary rounded-[24px] p-8 text-on-primary shadow-2xl shadow-primary/20 relative overflow-hidden">
-<!-- Background Brain Pattern Decor -->
-<div class="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none">
-<span class="material-symbols-outlined text-[10rem]" data-icon="psychology">psychology</span>
-</div>
-<div class="flex flex-col md:flex-row justify-between items-start gap-8 relative z-10">
-<div>
-<div class="inline-flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full mb-6">
-<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-<span class="text-xs font-bold uppercase tracking-widest">Dernier Bulletin</span>
-</div>
-<h3 class="text-3xl font-bold mb-1">Mars 2026</h3>
-<p class="text-primary-fixed-dim text-sm">Période du 01/03 au 31/03/2026</p>
-</div>
-<div class="flex flex-col items-end">
-<div class="text-right">
-<p class="text-primary-fixed-dim text-xs font-medium uppercase tracking-tighter">Net à payer</p>
-<p class="text-5xl font-extrabold tracking-tight mt-1">150 000 <span class="text-xl">€</span></p>
-</div>
-</div>
-</div>
-<div class="mt-10 grid grid-cols-2 md:grid-cols-3 gap-6 border-t border-white/10 pt-8">
-<div>
-<p class="text-primary-fixed-dim text-[10px] uppercase font-bold tracking-widest mb-1">Salaire Brut</p>
-<p class="text-xl font-bold">150 000 €</p>
-</div>
-<div>
-<p class="text-primary-fixed-dim text-[10px] uppercase font-bold tracking-widest mb-1">Retenues</p>
-<p class="text-xl font-bold">- 0 €</p>
-</div>
-<div class="col-span-2 md:col-span-1 flex justify-end items-center">
-<button class="bg-on-primary text-primary px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 transition-all active:scale-95 hover:bg-primary-fixed">
-<span class="material-symbols-outlined text-lg" data-icon="picture_as_pdf">picture_as_pdf</span>
-                            Télécharger PDF
-                        </button>
-</div>
-</div>
-</div>
-</section>
-<!-- Archive List -->
-<section class="space-y-4">
-<h4 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-6 ml-1">Historique 2026</h4>
-<!-- Item Février -->
-<div class="bg-surface-container-lowest rounded-2xl p-6 flex items-center justify-between transition-all hover:bg-white group">
-<div class="flex items-center gap-5">
-<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
-<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
-</div>
-<div>
-<h5 class="font-bold text-on-surface">Février 2026</h5>
-<div class="flex items-center gap-2 mt-0.5">
-<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Payé</span>
-<span class="text-xs text-outline">• 150 000 € net</span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
-</button>
-<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="download">download</span>
-</button>
-</div>
-</div>
-<!-- Item Janvier -->
-<div class="bg-surface-container-lowest rounded-2xl p-6 flex items-center justify-between transition-all hover:bg-white group">
-<div class="flex items-center gap-5">
-<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
-<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
-</div>
-<div>
-<h5 class="font-bold text-on-surface">Janvier 2026</h5>
-<div class="flex items-center gap-2 mt-0.5">
-<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Payé</span>
-<span class="text-xs text-outline">• 150 000 € net</span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
-</button>
-<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="download">download</span>
-</button>
-</div>
-</div>
-<h4 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-6 mt-10 ml-1">Historique 2025</h4>
-<!-- Item Décembre -->
-<div class="bg-surface-container-lowest rounded-2xl p-6 flex items-center justify-between transition-all hover:bg-white group">
-<div class="flex items-center gap-5">
-<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
-<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
-</div>
-<div>
-<h5 class="font-bold text-on-surface">Décembre 2025</h5>
-<div class="flex items-center gap-2 mt-0.5">
-<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Payé</span>
-<span class="text-xs text-outline">• 145 000 € net</span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="download">download</span>
-</button>
-</div>
-</div>
-<!-- Item Novembre -->
-<div class="bg-surface-container-lowest rounded-2xl p-6 flex items-center justify-between transition-all hover:bg-white group">
-<div class="flex items-center gap-5">
-<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
-<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
-</div>
-<div>
-<h5 class="font-bold text-on-surface">Novembre 2025</h5>
-<div class="flex items-center gap-2 mt-0.5">
-<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Payé</span>
-<span class="text-xs text-outline">• 145 000 € net</span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="download">download</span>
-</button>
-</div>
-</div>
-</section>
-<!-- Summary/Insights (Bento Style) -->
-<section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
-<div class="bg-secondary-container rounded-3xl p-6 flex flex-col justify-between">
-<span class="material-symbols-outlined text-on-secondary-container mb-4" data-icon="trending_up">trending_up</span>
-<div>
-<p class="text-sm font-medium text-on-secondary-container">Cumul Net Annuel</p>
-<p class="text-2xl font-black text-on-secondary-container">450 000 €</p>
-</div>
-</div>
-<div class="bg-surface-container-low rounded-3xl p-6 flex flex-col justify-between">
-<span class="material-symbols-outlined text-primary mb-4" data-icon="account_balance_wallet">account_balance_wallet</span>
-<div>
-<p class="text-sm font-medium text-on-surface-variant">Prochain Virement</p>
-<p class="text-2xl font-black text-primary">Estimé 30/04</p>
-</div>
-</div>
-</section>
-</main>
-<!-- BottomNavBar -->
-<nav class="fixed bottom-0 left-0 w-full h-20 bg-white/90 backdrop-blur-md flex justify-around items-center px-2 pb-safe z-50 rounded-t-2xl border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,33,110,0.04)]">
-<button class="flex flex-col items-center justify-center text-slate-400">
-<span class="material-symbols-outlined" data-icon="person">person</span>
-<span class="text-[14px] font-medium Inter">Ma fiche</span>
-</button>
-<!-- Active Tab: Bulletins -->
-<button class="flex flex-col items-center justify-center text-blue-800 font-bold scale-110 transition-transform">
-<span class="material-symbols-outlined" data-icon="description" style="font-variation-settings: 'FILL' 1;">description</span>
-<span class="text-[14px] font-medium Inter">Bulletins</span>
-</button>
-<button class="flex flex-col items-center justify-center text-slate-400">
-<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
-<span class="text-[14px] font-medium Inter">Présences</span>
-</button>
-<button class="flex flex-col items-center justify-center text-slate-400">
-<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
-<span class="text-[14px] font-medium Inter">Congés</span>
-</button>
-<button class="flex flex-col items-center justify-center text-slate-400">
-<span class="material-symbols-outlined" data-icon="grade">grade</span>
-<span class="text-[14px] font-medium Inter">Évaluations</span>
-</button>
-</nav>
-</body></html>
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full h-14 z-50 bg-surface/80 backdrop-blur-xl flex justify-between items-center px-4 w-full h-14">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-blue-900" data-icon="psychology">psychology</span>
+      <h1 class="text-base font-semibold text-blue-900">Tableau de Bord</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <img alt="Profile" class="w-8 h-8 rounded-full object-cover"
+        data-alt="Close up portrait of a young professional man with a pink shirt against a clean minimal background"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXP1anV9q82OytQR5NklF1TmQJiiUTTRC571mMHvZpBSNvpsqoXpJMLLhQmiueHkw4cOai3JI31dOZiZt4ET4Gxvj1qWM6VPkcYTcqQcfPHHB1sTjGHyD8kosVWdzy3Dtao__BYB_dYits4QVZaVpavBM0mZcaPcttYee9a2KDLTCugIcN7WBqicbN2fkWG2lamDNS62-pOoIuC9xw7nHpy4elrp7ZwQAETGUoHhQ9FWyWJLu8DmUwL40MSZ4K7KVjYFhbxfEQ4bni" />
+    </div>
+  </header>
+  <main class="pt-20 px-6 max-w-4xl mx-auto">
+    <!-- Editorial Header -->
+    <header class="mb-10">
+      <h2 class="text-[2.25rem] font-extrabold tracking-tight text-primary leading-tight">
+        Mes bulletins <br /> de paie
+      </h2>
+      <p class="text-secondary mt-2 font-medium">Consultez et téléchargez vos documents de rémunération.</p>
+    </header>
+    <!-- Featured/Latest Payslip Card (Asymmetric Layout) -->
+    <section class="mb-12">
+      <div class="bg-primary rounded-[24px] p-8 text-on-primary shadow-2xl shadow-primary/20 relative overflow-hidden">
+        <!-- Background Brain Pattern Decor -->
+        <div class="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none">
+          <span class="material-symbols-outlined text-[10rem]" data-icon="psychology">psychology</span>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8 relative z-10">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full mb-6">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span class="text-xs font-bold uppercase tracking-widest">Dernier Bulletin</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-1">Mars 2026</h3>
+            <p class="text-primary-fixed-dim text-sm">Période du 01/03 au 31/03/2026</p>
+          </div>
+          <div class="flex flex-col items-end">
+            <div class="text-right">
+              <p class="text-primary-fixed-dim text-xs font-medium uppercase tracking-tighter">Net à payer</p>
+              <p class="text-5xl font-extrabold tracking-tight mt-1">150 000 <span class="text-xl">€</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-3 gap-6 border-t border-white/10 pt-8">
+          <div>
+            <p class="text-primary-fixed-dim text-[10px] uppercase font-bold tracking-widest mb-1">Salaire Brut</p>
+            <p class="text-xl font-bold">150 000 €</p>
+          </div>
+          <div>
+            <p class="text-primary-fixed-dim text-[10px] uppercase font-bold tracking-widest mb-1">Retenues</p>
+            <p class="text-xl font-bold">- 0 €</p>
+          </div>
+          <div class="col-span-2 md:col-span-1 flex justify-end items-center">
+            <button
+              class="bg-on-primary text-primary px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 transition-all active:scale-95 hover:bg-primary-fixed">
+              <span class="material-symbols-outlined text-lg" data-icon="picture_as_pdf">picture_as_pdf</span>
+              Télécharger PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Archive List -->
+    <section class="space-y-4">
+      <h4 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-6 ml-1">Historique 2026</h4>
+      <!-- Item Février -->
+      <div
+        class="bg-surface-container-lowest rounded-2xl p-6 flex items-center justify-between transition-all hover:bg-white group">
+        <div class="flex items-center gap-5">
+          <div
+            class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
+            <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+          </div>
+          <div>
+            <h5 class="font-bold text-on-surface">Février 2026</h5>
+            <div class="flex items-center gap-2 mt-0.5">
+              <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Payé</span>
+              <span class="text-xs text-outline">• 150 000 € net</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+          </button>
+          <button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined" data-icon="download">download</span>
+          </button>
+        </div>
+      </div>
+      <!-- Item Janvier -->
+      <div
+        class="bg-surface-container-lowest rounded-2xl p-6 flex items-center justify-between transition-all hover:bg-white group">
+        <div class="flex items-center gap-5">
+          <div
+            class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
+            <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+          </div>
+          <div>
+            <h5 class="font-bold text-on-surface">Janvier 2026</h5>
+            <div class="flex items-center gap-2 mt-0.5">
+              <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Payé</span>
+              <span class="text-xs text-outline">• 150 000 € net</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+          </button>
+          <button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined" data-icon="download">download</span>
+          </button>
+        </div>
+      </div>
+      <h4 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-6 mt-10 ml-1">Historique 2025
+      </h4>
+      <!-- Item Décembre -->
+      <div
+        class="bg-surface-container-lowest rounded-2xl p-6 flex items-center justify-between transition-all hover:bg-white group">
+        <div class="flex items-center gap-5">
+          <div
+            class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
+            <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+          </div>
+          <div>
+            <h5 class="font-bold text-on-surface">Décembre 2025</h5>
+            <div class="flex items-center gap-2 mt-0.5">
+              <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Payé</span>
+              <span class="text-xs text-outline">• 145 000 € net</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined" data-icon="download">download</span>
+          </button>
+        </div>
+      </div>
+      <!-- Item Novembre -->
+      <div
+        class="bg-surface-container-lowest rounded-2xl p-6 flex items-center justify-between transition-all hover:bg-white group">
+        <div class="flex items-center gap-5">
+          <div
+            class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
+            <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+          </div>
+          <div>
+            <h5 class="font-bold text-on-surface">Novembre 2025</h5>
+            <div class="flex items-center gap-2 mt-0.5">
+              <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Payé</span>
+              <span class="text-xs text-outline">• 145 000 € net</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined" data-icon="download">download</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Summary/Insights (Bento Style) -->
+    <section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-secondary-container rounded-3xl p-6 flex flex-col justify-between">
+        <span class="material-symbols-outlined text-on-secondary-container mb-4"
+          data-icon="trending_up">trending_up</span>
+        <div>
+          <p class="text-sm font-medium text-on-secondary-container">Cumul Net Annuel</p>
+          <p class="text-2xl font-black text-on-secondary-container">450 000 €</p>
+        </div>
+      </div>
+      <div class="bg-surface-container-low rounded-3xl p-6 flex flex-col justify-between">
+        <span class="material-symbols-outlined text-primary mb-4"
+          data-icon="account_balance_wallet">account_balance_wallet</span>
+        <div>
+          <p class="text-sm font-medium text-on-surface-variant">Prochain Virement</p>
+          <p class="text-2xl font-black text-primary">Estimé 30/04</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <nav
+    class="fixed bottom-0 left-0 w-full h-16 bg-white/90 backdrop-blur-md flex justify-around items-center px-4 z-50 rounded-t-2xl shadow-[0_-4px_20px_rgba(0,33,110,0.06)] border-t border-slate-100">
+
+    <a href="maficheemploye_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Ma fiche</span>
+      <span class="material-symbols-outlined text-blue-900">person</span>
+    </a>
+
+    <a href="mesbulletinsdepaie_screen.html" class="nav-item active" onclick="setActive(this)">
+      <span class="nav-label">Bulletins</span>
+      <span class="material-symbols-outlined">description</span>
+    </a>
+
+    <a href="mespresences_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Présences</span>
+      <span class="material-symbols-outlined">schedule</span>
+    </a>
+
+    <a href="lcongepermission_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Congés</span>
+      <span class="material-symbols-outlined">calendar_today</span>
+    </a>
+
+    <a href="mesevaluations_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Évaluations</span>
+      <span class="material-symbols-outlined">grade</span>
+    </a>
+
+  </nav>
+
+  <script>
+    function setActive(el) {
+      document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+      el.classList.add('active');
+      // La navigation se fait normalement via le href
+    }
+  </script>
+</body>
+
+</html>

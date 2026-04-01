@@ -1,286 +1,370 @@
 <!DOCTYPE html>
 
-<html class="light" lang="fr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ma Fiche Employé - Mindtheos</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "error-container": "#ffdad6",
-              "error": "#ba1a1a",
-              "on-primary-fixed-variant": "#133ca8",
-              "on-surface-variant": "#444653",
-              "primary-container": "#0033a0",
-              "tertiary-fixed-dim": "#ffb5a0",
-              "surface": "#f9f9f9",
-              "secondary-container": "#c4dcff",
-              "outline-variant": "#c4c5d5",
-              "surface-container-highest": "#e2e2e2",
-              "tertiary-fixed": "#ffdbd1",
-              "primary-fixed": "#dce1ff",
-              "on-surface": "#1a1c1c",
-              "secondary": "#49607e",
-              "on-secondary-fixed-variant": "#314865",
-              "secondary-fixed-dim": "#b0c8eb",
-              "on-primary": "#ffffff",
-              "surface-container-high": "#e8e8e8",
-              "inverse-primary": "#b6c4ff",
-              "surface-variant": "#e2e2e2",
-              "on-tertiary": "#ffffff",
-              "background": "#f9f9f9",
-              "on-secondary-fixed": "#001c37",
-              "inverse-surface": "#2f3131",
-              "on-primary-container": "#8ea6ff",
-              "primary-fixed-dim": "#b6c4ff",
-              "on-primary-fixed": "#001550",
-              "on-error-container": "#93000a",
-              "secondary-fixed": "#d2e4ff",
-              "surface-container-low": "#f3f3f4",
-              "tertiary": "#531100",
-              "on-background": "#1a1c1c",
-              "surface-tint": "#3456c1",
-              "surface-dim": "#dadada",
-              "tertiary-container": "#791d00",
-              "on-secondary": "#ffffff",
-              "on-tertiary-fixed-variant": "#842506",
-              "on-secondary-container": "#49617f",
-              "outline": "#747684",
-              "on-tertiary-container": "#ff8a68",
-              "surface-container": "#eeeeee",
-              "primary": "#00216e",
-              "inverse-on-surface": "#f0f1f1",
-              "surface-bright": "#f9f9f9",
-              "surface-container-lowest": "#ffffff",
-              "on-error": "#ffffff",
-              "on-tertiary-fixed": "#3b0900"
-            },
-            fontFamily: {
-              "headline": ["Inter"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Ma Fiche Employé - Mindtheos</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#133ca8",
+            "on-surface-variant": "#444653",
+            "primary-container": "#0033a0",
+            "tertiary-fixed-dim": "#ffb5a0",
+            "surface": "#f9f9f9",
+            "secondary-container": "#c4dcff",
+            "outline-variant": "#c4c5d5",
+            "surface-container-highest": "#e2e2e2",
+            "tertiary-fixed": "#ffdbd1",
+            "primary-fixed": "#dce1ff",
+            "on-surface": "#1a1c1c",
+            "secondary": "#49607e",
+            "on-secondary-fixed-variant": "#314865",
+            "secondary-fixed-dim": "#b0c8eb",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#e8e8e8",
+            "inverse-primary": "#b6c4ff",
+            "surface-variant": "#e2e2e2",
+            "on-tertiary": "#ffffff",
+            "background": "#f9f9f9",
+            "on-secondary-fixed": "#001c37",
+            "inverse-surface": "#2f3131",
+            "on-primary-container": "#8ea6ff",
+            "primary-fixed-dim": "#b6c4ff",
+            "on-primary-fixed": "#001550",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#d2e4ff",
+            "surface-container-low": "#f3f3f4",
+            "tertiary": "#531100",
+            "on-background": "#1a1c1c",
+            "surface-tint": "#3456c1",
+            "surface-dim": "#dadada",
+            "tertiary-container": "#791d00",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#842506",
+            "on-secondary-container": "#49617f",
+            "outline": "#747684",
+            "on-tertiary-container": "#ff8a68",
+            "surface-container": "#eeeeee",
+            "primary": "#00216e",
+            "inverse-on-surface": "#f0f1f1",
+            "surface-bright": "#f9f9f9",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#3b0900"
           },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
         },
-      }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      body {
-        font-family: 'Inter', sans-serif;
-        -webkit-font-smoothing: antialiased;
-      }
-      .glass-effect {
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-      }
-      .bento-card {
-        transition: transform 0.2s ease-in-out;
-      }
-      .bento-card:active {
-        transform: scale(0.98);
-      }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
+      },
     }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+     .glass-header {
+      background: rgba(249, 249, 249, 0.8);
+      backdrop-filter: blur(20px);
+    }
+    /* Nav items */
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    /* Tooltip label au survol (desktop) */
+    .nav-label {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      background: #00216e;
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 4px 10px;
+      border-radius: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+    .nav-label::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-top-color: #00216e;
+    }
+
+    .nav-item:hover .nav-label,
+    .nav-item.active .nav-label {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Pill active */
+    .nav-item.active {
+      background: #dce1ff;
+    }
+    .nav-item.active .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      color: #00216e;
+    }
+
+    body { min-height: max(884px, 100dvh); }
   </style>
-  </head>
+</head>
+
 <body class="bg-surface text-on-surface mb-24">
-<!-- TopAppBar -->
-<nav class="fixed top-0 w-full h-14 z-50 bg-surface/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-4 transition-all duration-200">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-blue-900" data-icon="psychology">psychology</span>
-<h1 class="text-base font-semibold Inter text-blue-900">Tableau de Bord</h1>
-</div>
-<div class="w-8 h-8 rounded-full bg-secondary-container overflow-hidden">
-<img alt="Yanne Cedric Wilson Kouassi" data-alt="Portrait of a young man with a friendly expression in a pink shirt, soft professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvgRfEW3IrCMufRQWWo90-u8qI9pDfgV1reramEZmiSJLCYGZ1o3ZEPdLUZYNNpfO8Zrzzzp6ZM3BDZ05MNxeyKge7lg43-7YH2Ij_fIKUqHiNj6PhC0dgjISODJeKryfffyp2kINC3JY4DbH3BPrBbKtIt58Jn-it1nF1RNCM8V696kylqIBHY-XPb2yf67aa2IwDO_czDs6Apc8ZOPgd2yeeacdgHDCx6EO_7moDO7noZEYwpZHLH8DSG-V1ZuOMDPAxWxzS26oV"/>
-</div>
-</nav>
-<!-- Main Content Canvas -->
-<main class="mt-20 px-4 max-w-5xl mx-auto space-y-8">
-<!-- Hero Profile Section -->
-<section class="relative overflow-hidden rounded-[32px] bg-primary text-on-primary p-8 shadow-2xl">
-<div class="absolute top-0 right-0 opacity-5 pointer-events-none">
-<span class="material-symbols-outlined text-[200px]" data-icon="psychology">psychology</span>
-</div>
-<div class="flex flex-col md:flex-row items-center md:items-start gap-8 relative z-10">
-<div class="relative">
-<div class="w-32 h-32 md:w-40 md:h-40 rounded-[24px] overflow-hidden border-4 border-white/20">
-<img alt="Yanne Cedric Wilson Kouassi" data-alt="Close-up professional portrait of a young African man with a calm and confident expression, high-end studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoSsHSE3yvZVod9iq0r6HWyt_yY2UEHkJuzowAqnNT8GlpeA-jOEr0tiItQaY8ZRBeEZGSyrUexpWl0OhGIbOgMvkY4m8P2FqNJ1KnWTif6sGrJxOo7llQl5VFRZYe3iZI2Ua9wg9iwhv2MBx6Hy2r-CO687mnNFRTAlHiMiN6ugkpG956nwWLJltMFbh-5LHC8WFG2YzH3cK5fjTAI4gD4cJ7uzlmQfqqAuwywLyA93vzPAAcFtIG54rSgd81bFno7wAOjDIW9weo"/>
-</div>
-<div class="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-primary"></div>
-</div>
-<div class="flex-1 text-center md:text-left space-y-4">
-<h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-none">M YANNE CEDRIC WILSON KOUASSI</h2>
-<div class="flex flex-wrap justify-center md:justify-start gap-2">
-<span class="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold border border-white/10 uppercase tracking-widest">Actif</span>
-<span class="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold border border-white/10 uppercase tracking-widest">Stage</span>
-<span class="px-4 py-1.5 bg-blue-400/20 backdrop-blur-md rounded-full text-xs font-bold border border-blue-400/30">MAT-M-2026-0002</span>
-<span class="px-4 py-1.5 bg-secondary-container/20 backdrop-blur-md rounded-full text-xs font-bold border border-secondary-container/30">Service IT</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Stats Bento Grid -->
-<section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-<div class="bg-surface-container-lowest p-6 rounded-[24px] flex flex-col items-center justify-center text-center space-y-2">
-<span class="material-symbols-outlined text-primary mb-1" data-icon="work_history">work_history</span>
-<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Ancienneté</p>
-<h3 class="text-2xl font-bold text-primary">0.1 ans</h3>
-</div>
-<div class="bg-surface-container-lowest p-6 rounded-[24px] flex flex-col items-center justify-center text-center space-y-2">
-<span class="material-symbols-outlined text-primary mb-1" data-icon="cake">cake</span>
-<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Âge</p>
-<h3 class="text-2xl font-bold text-primary">22 ans</h3>
-</div>
-<div class="bg-surface-container-lowest p-6 rounded-[24px] flex flex-col items-center justify-center text-center space-y-2">
-<span class="material-symbols-outlined text-primary mb-1" data-icon="beach_access">beach_access</span>
-<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Solde Congés</p>
-<h3 class="text-2xl font-bold text-primary">0j</h3>
-</div>
-<div class="bg-surface-container-lowest p-6 rounded-[24px] flex flex-col items-center justify-center text-center space-y-2">
-<span class="material-symbols-outlined text-primary mb-1" data-icon="article">article</span>
-<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Documents</p>
-<h3 class="text-2xl font-bold text-primary">2</h3>
-</div>
-</section>
-<!-- Detailed Info & Salary -->
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<!-- Left Column: Personal Info -->
-<section class="lg:col-span-2 space-y-6">
-<div class="bg-surface-container-low rounded-[32px] p-8 space-y-6">
-<h4 class="text-xl font-bold flex items-center gap-3">
-<span class="material-symbols-outlined" data-icon="badge">badge</span>
-                        Informations Personnelles
-                    </h4>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-<div>
-<p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Email Professionnel</p>
-<p class="text-sm font-semibold text-primary">c.kouassi@mindtheos.com</p>
-</div>
-<div>
-<p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Téléphone</p>
-<p class="text-sm font-semibold text-primary">+225 07 00 00 00 00</p>
-</div>
-<div>
-<p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Date d'embauche</p>
-<p class="text-sm font-semibold text-primary">01 Octobre 2023</p>
-</div>
-<div>
-<p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Type de Contrat</p>
-<p class="text-sm font-semibold text-primary">Stage Professionnel</p>
-</div>
-<div>
-<p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Manager Direct</p>
-<p class="text-sm font-semibold text-primary">Jean-Marc Koffi</p>
-</div>
-<div>
-<p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Lieu de Travail</p>
-<p class="text-sm font-semibold text-primary">Abidjan, Côte d'Ivoire</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Right Column: Salary Section -->
-<section class="space-y-6">
-<div class="bg-surface-container-lowest rounded-[32px] p-8 shadow-sm border border-slate-100 flex flex-col h-full">
-<h4 class="text-xl font-bold flex items-center gap-3 mb-8">
-<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
-                        Rémunération
-                    </h4>
-<div class="space-y-4 flex-1">
-<div class="p-4 bg-primary-container/10 rounded-2xl flex justify-between items-center">
-<span class="text-xs font-semibold text-primary-container">Salaire Brut</span>
-<span class="text-lg font-bold text-primary">150 000 XOF</span>
-</div>
-<div class="space-y-2">
-<div class="p-4 bg-surface-container-low rounded-2xl flex justify-between items-center">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-error" data-icon="account_balance_wallet">account_balance_wallet</span>
-<span class="text-xs font-medium text-slate-600">Charges Sociales</span>
-</div>
-<span class="text-sm font-bold text-error">-5 400 F</span>
-</div>
-<div class="p-4 bg-surface-container-low rounded-2xl flex justify-between items-center">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-error" data-icon="account_balance">account_balance</span>
-<span class="text-xs font-medium text-slate-600">ITS</span>
-</div>
-<span class="text-sm font-bold text-error">-7 200 F</span>
-</div>
-</div>
-<div class="mt-8 p-6 bg-green-50 rounded-[24px] border border-green-100 text-center">
-<p class="text-[10px] font-bold uppercase tracking-widest text-green-700 mb-1">Net Estimé</p>
-<p class="text-3xl font-extrabold text-green-600">137 400 F</p>
-</div>
-</div>
-</div>
-</section>
-</div>
-<!-- Documents Section -->
-<section class="bg-surface-container-low rounded-[32px] p-8">
-<h4 class="text-xl font-bold flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
-                Documents Récents
-            </h4>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div class="bg-white p-4 rounded-2xl flex items-center gap-4 group hover:bg-blue-50 transition-colors cursor-pointer">
-<div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-200 transition-colors">
-<span class="material-symbols-outlined" data-icon="description">description</span>
-</div>
-<div class="flex-1">
-<p class="text-sm font-bold">Contrat_Stage_Kouassi.pdf</p>
-<p class="text-[10px] text-slate-400">Ajouté le 01 Oct 2023 • 1.2 MB</p>
-</div>
-<span class="material-symbols-outlined text-slate-300" data-icon="download">download</span>
-</div>
-<div class="bg-white p-4 rounded-2xl flex items-center gap-4 group hover:bg-blue-50 transition-colors cursor-pointer">
-<div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-200 transition-colors">
-<span class="material-symbols-outlined" data-icon="id_card">id_card</span>
-</div>
-<div class="flex-1">
-<p class="text-sm font-bold">CNI_Recto_Verso.pdf</p>
-<p class="text-[10px] text-slate-400">Ajouté le 28 Sep 2023 • 840 KB</p>
-</div>
-<span class="material-symbols-outlined text-slate-300" data-icon="download">download</span>
-</div>
-</div>
-</section>
-</main>
-<!-- BottomNavBar -->
-<nav class="fixed bottom-0 left-0 w-full h-20 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md flex justify-around items-center px-2 pb-safe z-50 rounded-t-2xl shadow-[0_-4px_20px_rgba(0,33,110,0.04)]">
-<!-- Ma fiche (Active) -->
-<a class="flex flex-col items-center justify-center text-blue-800 dark:text-blue-400 font-bold scale-110 transition-transform tap-highlight-none active:scale-90" href="#">
-<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
-<span class="text-[14px] font-medium Inter">Ma fiche</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-blue-50/50 transition-all tap-highlight-none active:scale-90" href="#">
-<span class="material-symbols-outlined" data-icon="description">description</span>
-<span class="text-[14px] font-medium Inter">Bulletins</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-blue-50/50 transition-all tap-highlight-none active:scale-90" href="#">
-<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
-<span class="text-[14px] font-medium Inter">Présences</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-blue-50/50 transition-all tap-highlight-none active:scale-90" href="#">
-<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
-<span class="text-[14px] font-medium Inter">Congés</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-blue-50/50 transition-all tap-highlight-none active:scale-90" href="#">
-<span class="material-symbols-outlined" data-icon="grade">grade</span>
-<span class="text-[14px] font-medium Inter">Évaluations</span>
-</a>
-</nav>
-</body></html>
+  <!-- TopAppBar -->
+  <nav
+    class="fixed top-0 w-full h-14 z-50 bg-surface/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-4 transition-all duration-200">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-blue-900" data-icon="psychology">psychology</span>
+      <h1 class="text-base font-semibold Inter text-blue-900">Tableau de Bord</h1>
+    </div>
+    <div class="w-8 h-8 rounded-full bg-secondary-container overflow-hidden">
+      <img alt="Yanne Cedric Wilson Kouassi"
+        data-alt="Portrait of a young man with a friendly expression in a pink shirt, soft professional studio lighting"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvgRfEW3IrCMufRQWWo90-u8qI9pDfgV1reramEZmiSJLCYGZ1o3ZEPdLUZYNNpfO8Zrzzzp6ZM3BDZ05MNxeyKge7lg43-7YH2Ij_fIKUqHiNj6PhC0dgjISODJeKryfffyp2kINC3JY4DbH3BPrBbKtIt58Jn-it1nF1RNCM8V696kylqIBHY-XPb2yf67aa2IwDO_czDs6Apc8ZOPgd2yeeacdgHDCx6EO_7moDO7noZEYwpZHLH8DSG-V1ZuOMDPAxWxzS26oV" />
+    </div>
+  </nav>
+  <!-- Main Content Canvas -->
+  <main class="mt-20 px-4 max-w-5xl mx-auto space-y-8">
+    <!-- Hero Profile Section -->
+    <section class="relative overflow-hidden rounded-[32px] bg-primary text-on-primary p-8 shadow-2xl">
+      <div class="absolute top-0 right-0 opacity-5 pointer-events-none">
+        <span class="material-symbols-outlined text-[200px]" data-icon="psychology">psychology</span>
+      </div>
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-8 relative z-10">
+        <div class="relative">
+          <div class="w-32 h-32 md:w-40 md:h-40 rounded-[24px] overflow-hidden border-4 border-white/20">
+            <img alt="Yanne Cedric Wilson Kouassi"
+              data-alt="Close-up professional portrait of a young African man with a calm and confident expression, high-end studio lighting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoSsHSE3yvZVod9iq0r6HWyt_yY2UEHkJuzowAqnNT8GlpeA-jOEr0tiItQaY8ZRBeEZGSyrUexpWl0OhGIbOgMvkY4m8P2FqNJ1KnWTif6sGrJxOo7llQl5VFRZYe3iZI2Ua9wg9iwhv2MBx6Hy2r-CO687mnNFRTAlHiMiN6ugkpG956nwWLJltMFbh-5LHC8WFG2YzH3cK5fjTAI4gD4cJ7uzlmQfqqAuwywLyA93vzPAAcFtIG54rSgd81bFno7wAOjDIW9weo" />
+          </div>
+          <div class="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-primary"></div>
+        </div>
+        <div class="flex-1 text-center md:text-left space-y-4">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-none">M YANNE CEDRIC WILSON KOUASSI</h2>
+          <div class="flex flex-wrap justify-center md:justify-start gap-2">
+            <span
+              class="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold border border-white/10 uppercase tracking-widest">Actif</span>
+            <span
+              class="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold border border-white/10 uppercase tracking-widest">Stage</span>
+            <span
+              class="px-4 py-1.5 bg-blue-400/20 backdrop-blur-md rounded-full text-xs font-bold border border-blue-400/30">MAT-M-2026-0002</span>
+            <span
+              class="px-4 py-1.5 bg-secondary-container/20 backdrop-blur-md rounded-full text-xs font-bold border border-secondary-container/30">Service
+              IT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Stats Bento Grid -->
+    <section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div
+        class="bg-surface-container-lowest p-6 rounded-[24px] flex flex-col items-center justify-center text-center space-y-2">
+        <span class="material-symbols-outlined text-primary mb-1" data-icon="work_history">work_history</span>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Ancienneté</p>
+        <h3 class="text-2xl font-bold text-primary">0.1 ans</h3>
+      </div>
+      <div
+        class="bg-surface-container-lowest p-6 rounded-[24px] flex flex-col items-center justify-center text-center space-y-2">
+        <span class="material-symbols-outlined text-primary mb-1" data-icon="cake">cake</span>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Âge</p>
+        <h3 class="text-2xl font-bold text-primary">22 ans</h3>
+      </div>
+      <div
+        class="bg-surface-container-lowest p-6 rounded-[24px] flex flex-col items-center justify-center text-center space-y-2">
+        <span class="material-symbols-outlined text-primary mb-1" data-icon="beach_access">beach_access</span>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Solde Congés</p>
+        <h3 class="text-2xl font-bold text-primary">0j</h3>
+      </div>
+      <div
+        class="bg-surface-container-lowest p-6 rounded-[24px] flex flex-col items-center justify-center text-center space-y-2">
+        <span class="material-symbols-outlined text-primary mb-1" data-icon="article">article</span>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Documents</p>
+        <h3 class="text-2xl font-bold text-primary">2</h3>
+      </div>
+    </section>
+    <!-- Detailed Info & Salary -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Left Column: Personal Info -->
+      <section class="lg:col-span-2 space-y-6">
+        <div class="bg-surface-container-low rounded-[32px] p-8 space-y-6">
+          <h4 class="text-xl font-bold flex items-center gap-3">
+            <span class="material-symbols-outlined" data-icon="badge">badge</span>
+            Informations Personnelles
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Email Professionnel</p>
+              <p class="text-sm font-semibold text-primary">c.kouassi@mindtheos.com</p>
+            </div>
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Téléphone</p>
+              <p class="text-sm font-semibold text-primary">+225 07 00 00 00 00</p>
+            </div>
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Date d'embauche</p>
+              <p class="text-sm font-semibold text-primary">01 Octobre 2023</p>
+            </div>
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Type de Contrat</p>
+              <p class="text-sm font-semibold text-primary">Stage Professionnel</p>
+            </div>
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Manager Direct</p>
+              <p class="text-sm font-semibold text-primary">Jean-Marc Koffi</p>
+            </div>
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 mb-1">Lieu de Travail</p>
+              <p class="text-sm font-semibold text-primary">Abidjan, Côte d'Ivoire</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Right Column: Salary Section -->
+      <section class="space-y-6">
+        <div
+          class="bg-surface-container-lowest rounded-[32px] p-8 shadow-sm border border-slate-100 flex flex-col h-full">
+          <h4 class="text-xl font-bold flex items-center gap-3 mb-8">
+            <span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+            Rémunération
+          </h4>
+          <div class="space-y-4 flex-1">
+            <div class="p-4 bg-primary-container/10 rounded-2xl flex justify-between items-center">
+              <span class="text-xs font-semibold text-primary-container">Salaire Brut</span>
+              <span class="text-lg font-bold text-primary">150 000 XOF</span>
+            </div>
+            <div class="space-y-2">
+              <div class="p-4 bg-surface-container-low rounded-2xl flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[18px] text-error"
+                    data-icon="account_balance_wallet">account_balance_wallet</span>
+                  <span class="text-xs font-medium text-slate-600">Charges Sociales</span>
+                </div>
+                <span class="text-sm font-bold text-error">-5 400 F</span>
+              </div>
+              <div class="p-4 bg-surface-container-low rounded-2xl flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[18px] text-error"
+                    data-icon="account_balance">account_balance</span>
+                  <span class="text-xs font-medium text-slate-600">ITS</span>
+                </div>
+                <span class="text-sm font-bold text-error">-7 200 F</span>
+              </div>
+            </div>
+            <div class="mt-8 p-6 bg-green-50 rounded-[24px] border border-green-100 text-center">
+              <p class="text-[10px] font-bold uppercase tracking-widest text-green-700 mb-1">Net Estimé</p>
+              <p class="text-3xl font-extrabold text-green-600">137 400 F</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Documents Section -->
+    <section class="bg-surface-container-low rounded-[32px] p-8">
+      <h4 class="text-xl font-bold flex items-center gap-3 mb-6">
+        <span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+        Documents Récents
+      </h4>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div
+          class="bg-white p-4 rounded-2xl flex items-center gap-4 group hover:bg-blue-50 transition-colors cursor-pointer">
+          <div
+            class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-200 transition-colors">
+            <span class="material-symbols-outlined" data-icon="description">description</span>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm font-bold">Contrat_Stage_Kouassi.pdf</p>
+            <p class="text-[10px] text-slate-400">Ajouté le 01 Oct 2023 • 1.2 MB</p>
+          </div>
+          <span class="material-symbols-outlined text-slate-300" data-icon="download">download</span>
+        </div>
+        <div
+          class="bg-white p-4 rounded-2xl flex items-center gap-4 group hover:bg-blue-50 transition-colors cursor-pointer">
+          <div
+            class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-200 transition-colors">
+            <span class="material-symbols-outlined" data-icon="id_card">id_card</span>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm font-bold">CNI_Recto_Verso.pdf</p>
+            <p class="text-[10px] text-slate-400">Ajouté le 28 Sep 2023 • 840 KB</p>
+          </div>
+          <span class="material-symbols-outlined text-slate-300" data-icon="download">download</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- BottomNavBar — icônes seules, label au survol/clic -->
+  <nav class="fixed bottom-0 left-0 w-full h-16 bg-white/90 backdrop-blur-md flex justify-around items-center px-4 z-50 rounded-t-2xl shadow-[0_-4px_20px_rgba(0,33,110,0.06)] border-t border-slate-100">
+
+    <a href="maficheemploye_screen.html" class="nav-item active" onclick="setActive(this)">
+      <span class="nav-label">Ma fiche</span>
+      <span class="material-symbols-outlined text-blue-900">person</span>
+    </a>
+
+    <a href="mesbulletinsdepaie_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Bulletins</span>
+      <span class="material-symbols-outlined">description</span>
+    </a>
+
+    <a href="mespresences_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Présences</span>
+      <span class="material-symbols-outlined">schedule</span>
+    </a>
+
+    <a href="lcongepermission_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Congés</span>
+      <span class="material-symbols-outlined">calendar_today</span>
+    </a>
+
+    <a href="mesevaluations_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Évaluations</span>
+      <span class="material-symbols-outlined">grade</span>
+    </a>
+
+  </nav>
+
+  <script>
+    function setActive(el) {
+      document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+      el.classList.add('active');
+      // La navigation se fait normalement via le href
+    }
+  </script>
+</body>
+
+</html>

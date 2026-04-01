@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#133ca8",
+              "on-surface-variant": "#444653",
+              "primary-container": "#0033a0",
+              "tertiary-fixed-dim": "#ffb5a0",
+              "surface": "#f9f9f9",
+              "secondary-container": "#c4dcff",
+              "outline-variant": "#c4c5d5",
+              "surface-container-highest": "#e2e2e2",
+              "tertiary-fixed": "#ffdbd1",
+              "primary-fixed": "#dce1ff",
+              "on-surface": "#1a1c1c",
+              "secondary": "#49607e",
+              "on-secondary-fixed-variant": "#314865",
+              "secondary-fixed-dim": "#b0c8eb",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e8e8e8",
+              "inverse-primary": "#b6c4ff",
+              "surface-variant": "#e2e2e2",
+              "on-tertiary": "#ffffff",
+              "background": "#f9f9f9",
+              "on-secondary-fixed": "#001c37",
+              "inverse-surface": "#2f3131",
+              "on-primary-container": "#8ea6ff",
+              "primary-fixed-dim": "#b6c4ff",
+              "on-primary-fixed": "#001550",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#d2e4ff",
+              "surface-container-low": "#f3f3f4",
+              "tertiary": "#531100",
+              "on-background": "#1a1c1c",
+              "surface-tint": "#3456c1",
+              "surface-dim": "#dadada",
+              "tertiary-container": "#791d00",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed-variant": "#842506",
+              "on-secondary-container": "#49617f",
+              "outline": "#747684",
+              "on-tertiary-container": "#ff8a68",
+              "surface-container": "#eeeeee",
+              "primary": "#00216e",
+              "inverse-on-surface": "#f0f1f1",
+              "surface-bright": "#f9f9f9",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#3b0900"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full h-14 z-50 bg-surface/80 backdrop-blur-xl flex justify-between items-center px-4 w-full h-14">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-xl hover:bg-slate-100 transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined text-blue-900" data-icon="psychology">psychology</span>
+</div>
+<h1 class="text-base font-semibold Inter text-blue-900">Tableau de Bord</h1>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-secondary-container">
+<img alt="Yanne Cedric Wilson Kouassi" class="w-full h-full object-cover" data-alt="Young professional man with dark skin wearing a pink shirt, headshot, blurred corporate office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4lYIcxnkAJjsYs1RWFHNmWq1cL89TG12VT4DhApCrWZrAU4VItSV2BeegefRkOA07pLK7ZzLzm2s_QX9kfBy6A9MOS1GXgQiSuZeUxIF50AzYVuIWlq6OTSqYmt7Et4W-Cpk9kL-1iYlFIWLxoCwcM6Wih6uiOtYCjnLGF21m-cfRi84Dw70mug86FYtLn-HlGVYSVcDQBoPpZ9bDiiYjpPLAZNIJq3a0guJ6PUFb771OTvy83Tds2-y4JzWknhgjHmS4Z6HScyvI"/>
+</div>
+</div>
+</header>
+<main class="pt-20 px-4 max-w-lg mx-auto">
+<!-- Editorial Greeting -->
+<section class="mb-8">
+<h2 class="text-4xl font-extrabold tracking-tight text-primary leading-tight">Nouvelle demande</h2>
+<p class="text-on-surface-variant text-sm mt-1">Gérez vos absences avec sérénité.</p>
+</section>
+<!-- Balance Alert Card -->
+<div class="bg-surface-container-low rounded-[15px] p-5 mb-8 relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary opacity-60">Solde Actuel</span>
+<p class="text-3xl font-extrabold text-primary">0,5 <span class="text-sm font-medium">Jours</span></p>
+</div>
+<div class="bg-error-container text-on-error-container px-3 py-1.5 rounded-full flex items-center gap-1.5 animate-pulse">
+<span class="material-symbols-outlined text-[16px]" data-icon="error">error</span>
+<span class="text-[11px] font-bold">Solde insuffisant</span>
+</div>
+</div>
+<div class="h-1.5 w-full bg-outline-variant/20 rounded-full">
+<div class="h-full bg-error rounded-full" style="width: 2%;"></div>
+</div>
+<p class="mt-3 text-[11px] text-on-surface-variant">Votre solde de congés payés est inférieur à la durée moyenne d'une absence standard.</p>
+</div>
+<!-- Form Section -->
+<form class="space-y-6">
+<!-- Type Toggle -->
+<div class="space-y-3">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Type de demande</label>
+<div class="grid grid-cols-2 gap-3">
+<label class="relative group cursor-pointer">
+<input checked="" class="peer sr-only" name="leave_type" type="radio"/>
+<div class="bg-surface-container-lowest peer-checked:bg-primary-container peer-checked:text-on-primary p-4 rounded-[15px] transition-all flex flex-col items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="text-[14px] font-semibold">Permission</span>
+</div>
+</label>
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="leave_type" type="radio"/>
+<div class="bg-surface-container-lowest peer-checked:bg-primary-container peer-checked:text-on-primary p-4 rounded-[15px] transition-all flex flex-col items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="beach_access">beach_access</span>
+<span class="text-[14px] font-semibold">Congé</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Date Selection -->
+<div class="bg-surface-container-low rounded-[15px] p-6 space-y-5">
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="event">event</span>
+<span class="text-[14px] font-semibold text-on-surface">Période</span>
+</div>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-5 h-5 rounded-md border-outline text-primary-container focus:ring-primary-container/20" type="checkbox"/>
+<span class="text-[13px] font-medium text-on-surface-variant">Demi-journée</span>
+</label>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-[11px] font-bold text-on-surface-variant px-1">Date de début</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-[12px] text-sm focus:ring-2 focus:ring-primary/20 transition-all p-3" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] font-bold text-on-surface-variant px-1">Date de fin</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-[12px] text-sm focus:ring-2 focus:ring-primary/20 transition-all p-3" type="date"/>
+</div>
+</div>
+</div>
+<!-- Reason Field -->
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Motif *</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-[15px] text-sm focus:ring-2 focus:ring-primary/20 transition-all p-4 placeholder:text-slate-400" placeholder="Veuillez préciser la raison de votre absence..." rows="4"></textarea>
+</div>
+<!-- Action Buttons -->
+<div class="flex gap-4 pt-4">
+<button class="flex-1 py-4 text-[15px] font-bold text-on-surface-variant bg-surface-container-high rounded-[15px] hover:bg-slate-200 transition-all active:scale-95" type="button">
+                    Annuler
+                </button>
+<button class="flex-1 py-4 text-[15px] font-bold text-on-primary bg-primary-container rounded-[15px] shadow-lg shadow-primary-container/20 hover:opacity-90 transition-all active:scale-95" type="submit">
+                    Soumettre
+                </button>
+</div>
+</form>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-2 pb-safe bg-white/90 backdrop-blur-md rounded-t-2xl shadow-[0_-4px_20px_rgba(0,33,110,0.04)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[14px] font-medium Inter">Ma fiche</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="text-[14px] font-medium Inter">Bulletins</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="text-[14px] font-medium Inter">Présences</span>
+</a>
+<a class="flex flex-col items-center justify-center text-blue-800 font-bold scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="text-[14px] font-medium Inter">Congés</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="grade">grade</span>
+<span class="text-[14px] font-medium Inter">Évaluations</span>
+</a>
+</nav>
+</body></html>

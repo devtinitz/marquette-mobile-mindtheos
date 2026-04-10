@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#133ca8",
+            "on-surface-variant": "#444653",
+            "primary-container": "#0033a0",
+            "tertiary-fixed-dim": "#ffb5a0",
+            "surface": "#f9f9f9",
+            "secondary-container": "#c4dcff",
+            "outline-variant": "#c4c5d5",
+            "surface-container-highest": "#e2e2e2",
+            "tertiary-fixed": "#ffdbd1",
+            "primary-fixed": "#dce1ff",
+            "on-surface": "#1a1c1c",
+            "secondary": "#49607e",
+            "on-secondary-fixed-variant": "#314865",
+            "secondary-fixed-dim": "#b0c8eb",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#e8e8e8",
+            "inverse-primary": "#b6c4ff",
+            "surface-variant": "#e2e2e2",
+            "on-tertiary": "#ffffff",
+            "background": "#f9f9f9",
+            "on-secondary-fixed": "#001c37",
+            "inverse-surface": "#2f3131",
+            "on-primary-container": "#8ea6ff",
+            "primary-fixed-dim": "#b6c4ff",
+            "on-primary-fixed": "#001550",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#d2e4ff",
+            "surface-container-low": "#f3f3f4",
+            "tertiary": "#531100",
+            "on-background": "#1a1c1c",
+            "surface-tint": "#3456c1",
+            "surface-dim": "#dadada",
+            "tertiary-container": "#791d00",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#842506",
+            "on-secondary-container": "#49617f",
+            "outline": "#747684",
+            "on-tertiary-container": "#ff8a68",
+            "surface-container": "#eeeeee",
+            "primary": "#00216e",
+            "inverse-on-surface": "#f0f1f1",
+            "surface-bright": "#f9f9f9",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#3b0900"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+     .glass-header {
+      background: rgba(249, 249, 249, 0.8);
+      backdrop-filter: blur(20px);
+    }
+    /* Nav items */
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    /* Tooltip label au survol (desktop) */
+    .nav-label {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      background: #00216e;
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 4px 10px;
+      border-radius: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+    .nav-label::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-top-color: #00216e;
+    }
+
+    .nav-item:hover .nav-label,
+    .nav-item.active .nav-label {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Pill active */
+    .nav-item.active {
+      background: #dce1ff;
+    }
+    .nav-item.active .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      color: #00216e;
+    }
+
+    body { min-height: max(884px, 100dvh); }
+  </style>
+  <script src="mobile-frame.js"></script>
+
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full h-14 z-50 glass-header flex justify-between items-center px-4 transition-all duration-200">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-blue-900" style="font-variation-settings: 'FILL' 1;">psychology</span>
+      <h1 class="text-base font-semibold text-blue-900 tracking-tight">Tableau de Bord</h1>
+    </div>
+    <div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high ring-2 ring-primary/5">
+      <img alt="Yanne Cedric Wilson Kouassi in pink shirt" class="w-full h-full object-cover"
+        data-alt="portrait of a young professional man with a confident expression wearing a light pink shirt, soft natural indoor lighting"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4DhhNj7ifZ8vnubgEBlq4S3TMN53fh5nhB4fFFZSM34DjabIOxnvk8yxoWcdGxkKCl5bXgzfIgzWW2eqXFFAx12jgbXcDguWmzz72-617uH5LjEDtYfd2we2sQY9-j3U3-IzEtzrJN3OYIJtIbEWPL5x9FB9pZ5UsTW0bLHKSeF8RPb8usZM6ZzNTblal7W2mAG-u5ZUkGjPHoVlrA2kQA-oWXYaB1EZTolfEvW7UeUwRtVHP4_psd3vHWEy4FJNtNtDmb-uquKwO" />
+    </div>
+  </header>
+  <main class="pt-20 px-6 max-w-2xl mx-auto">
+    <!-- Hero Display Section -->
+    <section class="mb-10">
+      <p class="text-sm font-medium text-secondary mb-1">Ma ponctualité</p>
+      <h2 class="text-[2.25rem] font-bold leading-tight tracking-tight text-primary">Présences</h2>
+    </section>
+    <!-- Stats Bento Grid -->
+    <div class="grid grid-cols-2 gap-4 mb-8">
+      <div
+        class="bg-surface-container-lowest p-5 rounded-[15px] shadow-[0_4px_20px_rgba(0,33,110,0.02)] border border-blue-900/5">
+        <span class="text-xs font-semibold text-secondary block mb-2">Taux de présence</span>
+        <div class="flex items-baseline gap-1">
+          <span class="text-3xl font-extrabold text-primary">100%</span>
+          <span class="material-symbols-outlined text-green-600 text-sm"
+            style="font-variation-settings: 'FILL' 1;">trending_up</span>
+        </div>
+        <div class="mt-3 w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+          <div class="bg-primary h-full w-full"></div>
+        </div>
+      </div>
+      <div
+        class="bg-surface-container-lowest p-5 rounded-[15px] shadow-[0_4px_20px_rgba(0,33,110,0.02)] border border-blue-900/5">
+        <span class="text-xs font-semibold text-secondary block mb-2">Temps moyen</span>
+        <div class="flex items-baseline gap-1">
+          <span class="text-3xl font-extrabold text-primary">5.7h</span>
+          <span class="text-[10px] font-bold text-secondary-container bg-primary px-1.5 py-0.5 rounded-full">/
+            jour</span>
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-5 rounded-[15px] flex flex-col justify-between">
+        <span class="text-xs font-semibold text-secondary block">Retards</span>
+        <span class="text-3xl font-extrabold text-primary">0</span>
+      </div>
+      <div class="bg-surface-container-low p-5 rounded-[15px] flex flex-col justify-between">
+        <span class="text-xs font-semibold text-secondary block">Absences</span>
+        <span class="text-3xl font-extrabold text-primary">0</span>
+      </div>
+    </div>
+    <!-- Weekly Chart -->
+    <section class="bg-surface-container-lowest p-6 rounded-[15px] mb-8 shadow-[0_4px_20px_rgba(0,33,110,0.04)]">
+      <div class="flex justify-between items-center mb-8">
+        <div>
+          <h3 class="text-sm font-bold text-primary">Activité hebdomadaire</h3>
+          <p class="text-xs text-secondary">Semaine du 01/04/2026</p>
+        </div>
+        <span class="material-symbols-outlined text-primary-container">insights</span>
+      </div>
+      <div class="flex items-end justify-between h-32 gap-3 px-2">
+        <div class="flex-1 flex flex-col items-center gap-2">
+          <div class="w-full bg-primary-container rounded-t-lg transition-all" style="height: 85%;"></div>
+          <span class="text-[10px] font-bold text-secondary">LUN</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center gap-2">
+          <div class="w-full bg-primary-container/60 rounded-t-lg transition-all" style="height: 70%;"></div>
+          <span class="text-[10px] font-bold text-secondary">MAR</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center gap-2">
+          <div class="w-full bg-primary-container rounded-t-lg transition-all" style="height: 95%;"></div>
+          <span class="text-[10px] font-bold text-secondary">MER</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center gap-2">
+          <div class="w-full bg-primary-container/40 rounded-t-lg transition-all" style="height: 60%;"></div>
+          <span class="text-[10px] font-bold text-secondary">JEU</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center gap-2">
+          <div class="w-full bg-primary-container rounded-t-lg transition-all" style="height: 90%;"></div>
+          <span class="text-[10px] font-bold text-secondary">VEN</span>
+        </div>
+      </div>
+    </section>
+    <!-- Attendance History -->
+    <section>
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-base font-bold text-primary">Historique des pointages</h3>
+        <button class="text-xs font-semibold text-primary-container flex items-center gap-1">
+          Voir tout <span class="material-symbols-outlined text-sm">chevron_right</span>
+        </button>
+      </div>
+      <div class="space-y-3">
+        <!-- Clock-in Record -->
+        <div
+          class="group bg-surface-container-lowest p-5 rounded-[15px] flex items-center justify-between transition-all active:scale-95 border-l-4 border-green-500 shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+              <span class="material-symbols-outlined text-green-600"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-secondary uppercase tracking-wider">01 AVRIL 2026</p>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-sm font-medium text-on-surface">07:46</span>
+                <span class="text-xs text-secondary-fixed-dim">à</span>
+                <span class="text-sm font-medium text-on-surface">13:26</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="text-sm font-bold text-primary">5h39 travaillé</p>
+            <span
+              class="inline-flex items-center px-2 py-0.5 mt-1 rounded-full text-[10px] font-bold bg-green-100 text-green-700">Présent</span>
+          </div>
+        </div>
+        <!-- Previous Record (Placeholder/Context) -->
+        <div class="bg-surface-container-low/50 p-5 rounded-[15px] flex items-center justify-between opacity-80">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-slate-400">
+              <span class="material-symbols-outlined">schedule</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-secondary uppercase tracking-wider">31 MARS 2026</p>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-sm font-medium">08:02</span>
+                <span class="text-xs">à</span>
+                <span class="text-sm font-medium">17:15</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="text-sm font-bold text-slate-500">8h13 travaillé</p>
+            <span
+              class="inline-flex items-center px-2 py-0.5 mt-1 rounded-full text-[10px] font-bold bg-surface-container-high text-secondary">Présent</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- BottomNavBar -->
+  <nav
+    class="fixed bottom-0 left-0 w-full h-16 bg-white/90 backdrop-blur-md flex justify-around items-center px-4 z-50 rounded-t-2xl shadow-[0_-4px_20px_rgba(0,33,110,0.06)] border-t border-slate-100">
+
+    <a href="maficheemploye_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Ma fiche</span>
+      <span class="material-symbols-outlined text-blue-900">person</span>
+    </a>
+
+    <a href="mesbulletinsdepaie_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Bulletins</span>
+      <span class="material-symbols-outlined">description</span>
+    </a>
+
+    <a href="mespresences_screen.html" class="nav-item active" onclick="setActive(this)">
+      <span class="nav-label">Présences</span>
+      <span class="material-symbols-outlined">schedule</span>
+    </a>
+
+    <a href="lcongepermission_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Congés</span>
+      <span class="material-symbols-outlined">calendar_today</span>
+    </a>
+
+    <a href="mesevaluations_screen.html" class="nav-item text-slate-400" onclick="setActive(this)">
+      <span class="nav-label">Évaluations</span>
+      <span class="material-symbols-outlined">grade</span>
+    </a>
+
+  </nav>
+
+  <script>
+    function setActive(el) {
+      document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+      el.classList.add('active');
+      // La navigation se fait normalement via le href
+    }
+  </script>
+</body>
+
+</html>
